@@ -1,0 +1,24 @@
+section{
+    color: white;
+    width: 50vw;
+    margin: auto;
+    margin-top: 10vh;
+    padding: 5vw;
+    text-align: center;
+    background-color: rgb(0, 255, 170);
+}
+button{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin: 0;
+}
+input{
+    width: 100%;
+    margin: 5vh auto;
+}
+.editors{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
