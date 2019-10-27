@@ -34,8 +34,7 @@ function buttonHandel(btnValue){
         calculate();
     }else if(btnValue === "In"){
         saveValue()
-    }
-    else{
+    }else{
         addValue(btnValue)
     }
 }
@@ -44,7 +43,7 @@ function buttonHandel(btnValue){
 
 // the delete C button
 function resetValue(){
-    input.value = '';
+    input.value = "";
 }
 
 // main calculation
@@ -67,7 +66,7 @@ function saveValue(){
 }
 
 // claculation by the square-root and square-power buttons
-function specialCalculate(btnValue){
+function  specialCalculate(btnValue){
     if(input.value){
         calculate();
         addValue(btnValue);
