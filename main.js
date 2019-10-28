@@ -13,8 +13,8 @@ const buttonHtml = buttonNames.map(item => {
             ${item}
         </button>`
         );
-}).join('')
-buttonsDiv.innerHTML+=buttonHtml
+})
+buttonsDiv.innerHTML+=buttonHtml.join('')
 // buttonHtml.forEach(btnHtml => buttonsDiv.innerHTML+=btnHtml )
 
 //***** selecting buttons and ading event listener
