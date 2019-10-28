@@ -13,9 +13,9 @@ const buttonHtml = buttonNames.map(item => {
             ${item}
         </button>`
         );
-})
-
-buttonHtml.forEach(btnHtml => buttonsDiv.innerHTML+=btnHtml )
+}).join('')
+buttonsDiv.innerHTML+=buttonHtml
+// buttonHtml.forEach(btnHtml => buttonsDiv.innerHTML+=btnHtml )
 
 //***** selecting buttons and ading event listener
 const allButtons = document.querySelectorAll(".editor");
