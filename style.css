@@ -10,7 +10,7 @@ section{
     align-items: center;
     color: white;
     max-width: 300px;
-    height: 70vh;
+    height: 80vh;
     margin: auto;
     margin-top: 5vh;
     padding: 4vw;
@@ -23,7 +23,9 @@ h2{
 }
 input{
     font-family: 'retro-regular';
+    font-size: 6vh;
     width: 80%;
+    height: 8vh;
     margin: 3vh auto;
     margin-top: 0;
     display: block;
