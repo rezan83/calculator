@@ -2,11 +2,11 @@
 const buttonsDiv = document.getElementById("buttonsDiv")
 const input = document.getElementById("input");
 
-// saved value by In button
-var saved = 0;
+//not in use now but saved value by In button
+// var saved = 0;
 
-// adding buttons to buttonsDiv
-const buttonNames = ['C','In',7,8,9,'+',4,5,6,'-',1,2,3,'*',0,'.','=','/']
+//*******adding buttons to buttonsDiv
+const buttonNames = ['C','ln',7,8,9,'+',4,5,6,'-',1,2,3,'*',0,'.','=','/']
 const buttonHtml = buttonNames.map(item => {
     return(
         `<button class="editor" id="${item}" value="${item}">
@@ -17,14 +17,14 @@ const buttonHtml = buttonNames.map(item => {
 
 buttonHtml.forEach(btnHtml => buttonsDiv.innerHTML+=btnHtml )
 
-// selecting buttons and ading event listener
+//***** selecting buttons and ading event listener
 const allButtons = document.querySelectorAll(".editor");
 allButtons.forEach(button => {
     button.addEventListener('click', (e)=> buttonHandel(e.target.value))
 })
 
 
-// main click handler function
+//**** main click handler function
 function buttonHandel(btnValue){
     if (btnValue === "C") {
         resetValue()
@@ -32,8 +32,8 @@ function buttonHandel(btnValue){
         specialCalculate(btnValue)
     }else if(btnValue === "="){
         calculate();
-    }else if(btnValue === "In"){
-        saveValue()
+    }else if(btnValue === "ln"){
+        naturalLog()
     }else{
         addValue(btnValue)
     }
@@ -56,17 +56,23 @@ function addValue(btnValue){
     input.value+=btnValue;
 }
 
-// saving a value from input to use it later with 'In' button
-function saveValue(){
-    if(input.value && Number(input.value[input.value.length-1])){
-        saved = eval(input.value);
-    }else{
-        input.value+=saved;
-    } 
+// not in use now but was for saving a value from input with 'ln' button
+// function saveValue(){
+//     if(input.value && Number(input.value[input.value.length-1])){
+//         saved = eval(input.value);
+//     }else{
+//         input.value+=saved;
+//     } 
+// }
+
+// natural logarithem by "ln"
+function naturalLog(){
+    calculate();
+    input.value = Math.log(input.value)
 }
 
 // claculation by the square-root and square-power buttons
-function  specialCalculate(btnValue){
+function specialCalculate(btnValue){
     if(input.value){
         calculate();
         addValue(btnValue);
