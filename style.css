@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'retro-regular';
+    src: local('./DS-DIGI') , url('./DS-DIGI.ttf') format('truetype');
+}
+
 section{
     display: flex;
     flex-direction: column;
@@ -17,10 +22,15 @@ h2{
     margin-top: 0;
 }
 input{
+    font-family: 'retro-regular';
     width: 80%;
     margin: 3vh auto;
     margin-top: 0;
     display: block;
+    background-color: black;
+    color: #28D7FE;
+    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE;
+    
 }
 button{
     width: 60px;
